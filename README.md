@@ -4,7 +4,7 @@
 
 1. Kanchan Rani
 2. Yashpal Lohan 
-3. 
+3. Kshitiz Surana
 4. 
 
 ## Project Overview

@@ -71,6 +71,7 @@ Network traffic is analyzed using the following filters:
 
 ## Project Structure
 
+```text 
 computer-networks-private-service-platform/
 │
 ├── README.md
@@ -99,7 +100,7 @@ computer-networks-private-service-platform/
     ├── tls-wireshark.png
     ├── caching.png
     └── load-balancing.png
-    
+   ``` 
 ## Technologies Used
 - macOS
 - Python

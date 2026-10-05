@@ -29,7 +29,6 @@ DNS Server:
 
 DNS Records:
 
-```text
 app.team1.test → 10.7.5.97
 api.team1.test → 10.7.5.97
 

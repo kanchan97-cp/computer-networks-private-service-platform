@@ -33,3 +33,34 @@ Port: 3002
 
 ## Security Result
 The backend services are not intended to be accessed directly by clients. The reverse proxy acts as the controlled entry point to the application.
+
+## Example macOS PF Rule Template
+
+The following is a reference template for restricting backend ports using macOS Packet Filter (PF).
+
+Replace NGINX_IP with the actual IP address of the Nginx host.
+
+### Backend A Rule Concept
+Allow Nginx to access port 3001, then block other incoming connections to that port.
+
+### Backend B Rule Concept
+Allow Nginx to access port 3002, then block other incoming connections to that port.
+
+### Example Rule Structure
+
+```pf
+pass in quick proto tcp from NGINX_IP to any port 3001
+block in quick proto tcp from any to any port 3001
+
+pass in quick proto tcp from NGINX_IP to any port 3002
+block in quick proto tcp from any to any port 3002
+```
+
+The above is a conceptual rule template. It must be adapted to the actual backend host, interface, IP addresses and existing PF rules.
+
+### Safety
+Do not replace the system firewall configuration without reviewing the existing rules. Incorrect firewall rules may block SSH or other network access.
+
+### Verification
+The rules must be tested from both the client and Nginx host to confirm direct access restrictions and proxy connectivity.
+```

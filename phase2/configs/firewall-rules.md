@@ -33,6 +33,7 @@ Port: 3002
 
 ## Security Result
 The backend services are not intended to be accessed directly by clients. The reverse proxy acts as the controlled entry point to the application.
+<<<<<<< HEAD
 
 ## Example macOS PF Rule Template
 
@@ -64,3 +65,5 @@ Do not replace the system firewall configuration without reviewing the existing 
 ### Verification
 The rules must be tested from both the client and Nginx host to confirm direct access restrictions and proxy connectivity.
 ```
+=======
+>>>>>>> 9832b2d3eb393385ea744b453eac3c8473b0b23b
